@@ -5,3 +5,4 @@ arviz
 numpy
 matplotlib
 python-binance
+ccxt
