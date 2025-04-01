@@ -1,3 +1,5 @@
+
+
 def long_short(ret, horizon):
     # At each period, rank the stocks based on their average return over the past horizon
     avg_ret_rank = ret.rolling(horizon, min_periods=1).mean().rank(axis=1)

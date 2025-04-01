@@ -1,2 +1,2 @@
 # QuantResearch
-Automated Trading Algorithms
+Algorithmic Trading
