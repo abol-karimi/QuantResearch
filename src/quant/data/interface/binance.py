@@ -7,7 +7,7 @@ from binance.client import Client as bnb_client
 client = bnb_client(tld='US')
 
 
-def get_binance_close(symbol, freq, start_ts, end_ts):
+def get_close(symbol, freq, start_ts, end_ts):
     data = client.get_historical_klines(symbol, freq, start_ts, end_ts)
 
     # convert the nested list to a dataframe
