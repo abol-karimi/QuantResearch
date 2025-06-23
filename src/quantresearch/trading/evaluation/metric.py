@@ -59,5 +59,5 @@ def max_drawdown_stats(returns_cumulative):
         'peak_date': last_peak_idx,
         'trough_date': max_dd_idx,
         'recovery_date': recovery_idx if recovered else None,
-        'drawdown_series': running_drawdown,
+        'running_drawdown': running_drawdown,
     }
