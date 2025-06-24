@@ -6,3 +6,6 @@ numpy
 matplotlib
 python-binance
 ccxt
+seaborn
+statsmodels
+joblib
