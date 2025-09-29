@@ -9,7 +9,8 @@ def strategy_returns(strategy, market_returns):
     """
     portfolio = strategy.shift()
     returns_per_asset = portfolio * market_returns
-    return returns_per_asset.sum(axis=1)
+    returns = returns_per_asset.sum(axis=1)
+    return returns
 
 
 def volatility(returns, period):
@@ -20,9 +21,8 @@ def sharpe_ratio(returns, period, annualized=True):
     """period is in hours"""
     sr = returns.mean() / returns.std()
     if annualized:
-       return sr * np.sqrt(252 * 24 / period)
-    else:
-        return sr
+       sr = sr * np.sqrt(365 * 24 / period)
+    return sr
 
 
 def max_drawdown(returns_cumulative):
